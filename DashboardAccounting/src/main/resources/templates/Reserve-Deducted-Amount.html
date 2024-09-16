@@ -1,0 +1,100 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+	<!-- Main content table -->
+	<table style="width:70%;border:1px solid #ddd">
+		<tbody>
+			<tr>
+				<td>
+					<!-- Nested table for the logo with background color -->
+					<table style="width:100%;background:#ddd">
+						<tbody>
+							<tr>
+								<td style="padding:10px"><img
+										src="https://s3.amazonaws.com/oodles-blogs/blog-images/81543e60-ff6b-4b57-bc6e-70c23563feb0.png">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td style="color: #333; font-size:14px; padding: 21px 10px 12px 16px;line-height: 18px;"> Hi
+					<Strong><span th:text="${buOwner}"></span></Strong>,
+				</td>
+			</tr>
+			<tr>
+				<td
+					style="padding: 25px 9px 11px 30px; display:block;line-height: 18px;text-align: justify;padding-right: 30px;">
+					The following deductions have been made for <Strong><span th:text="${bu}"></span></Strong> BU in the
+					current week.
+					To get a detailed overview of the available <a th:href="${responseUrl}">reserve</a>, Please refer
+					the reserve section of BU Dashboard.
+				</td>
+			</tr>
+			<!-- Table for Deductions -->
+			<table cellpadding="0" cellspacing="0" border="0" width="100%"
+				style="font-size:20px;padding:25px 9px 11px 30px;font-size:20px;">
+				<tr>
+					<th
+						style="padding:10px 20px;border:2px solid #dddddd;background:#2486bc;color:#fff;font-size: 12px;">
+						Deducted By</th>
+					<th
+						style="padding:10px 20px;border:2px solid #dddddd;background:#2486bc;color:#fff;font-size: 12px;">
+						Deducted On</th>
+					<th
+						style="padding:10px 20px;border:2px solid #dddddd;background:#2486bc;color:#fff;font-size: 12px;">
+						Deducted Amount</th>
+					<th
+						style="padding:10px 20px;border:2px solid #dddddd;background:#2486bc;color:#fff;font-size: 12px;">
+						Remarks</th>
+				</tr>
+				<div th:if="${not #lists.isEmpty(data)}">
+					<th:block th:each="deduction : ${data}">
+						<tr>
+							<td style="padding:2px 5px;border:2px solid #dddddd;font-size: 10px;">
+								<span th:text="${deduction.deductedBy}" />
+							</td>
+							<td style="padding:2px 5px;border:2px solid #dddddd;font-size: 10px;">
+								<span th:text="${deduction.deductedOn}" />
+							</td>
+							<td style="padding:2px 5px;border:2px solid #dddddd;font-size: 10px;">
+								<span th:text="${deduction.deductedAmount}" />
+							</td>
+							<td style="padding:2px 5px;border:2px solid #dddddd;font-size: 10px;">
+								<span th:text="${deduction.remarks}" />
+							</td>
+						</tr>
+					</th:block>
+				</div>
+				<div th:unless="${not #lists.isEmpty(data)}">
+					<tr>
+						<td colspan="4" style="padding-top: 20px;text-align:center;padding-left: 28px;"><strong> No
+								Records Found.</strong></td>
+					</tr>
+				</div>
+			</table>
+			<!--	<td style="padding:0px 10px 0px 10px;">
+				<div style="margin-left: 19px;dispaly:block; line-height: 36px;text-align:left;margin-top:10px">
+				To see available reserve:<a th:href="${responseUrl}">click Here </a>
+				 </div>
+			</td>-->
+
+			<tr>
+				<td style="padding-top: 20px;padding-left: 28px;">Thanks</td>
+			</tr>
+			<tr>
+				<td style="padding:6px 20px 10px 28px;">Team Oodles</td>
+			</tr>
+			<tr>
+				<td style="background:#ddd;border-top:5px solid #0099cc;padding:15px 0;text-align:center;width:100%;">
+					<p>Copyright 2009-<span th:text="${currentYear}"></span>
+						<g:formatDate format="yyyy" date="${new Date()}" /> OodlesTechnologies. All rights reserved.
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>

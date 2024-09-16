@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div style="border: 1px solid #7070703d; max-width: 800px">
+        <div style="border-bottom: 1px solid #7070703d; width: 100%; height: 48px">
+            <span style="width: 60%; margin-top: 10px; padding-left: 10px">
+                <img src="https://s3.amazonaws.com/oodles-blogs/blog-images/81543e60-ff6b-4b57-bc6e-70c23563feb0.png"
+                    alt="Oodles Logo" style="height: 35px; margin-top: 5px" />
+            </span>
+            <span style="width: 40%; float: right">
+                <h5 style="
+              color: #00326b;
+              text-align: right;
+              font-size: 16px;
+              margin: 0px;
+              margin-top: 10px;
+              margin-right: 10px;
+            ">
+                    BU Reserve Change
+                </h5>
+            </span>
+        </div>
+        <div style="font-size: 14px; padding: 12px; padding-top: 0px;">
+            <div style="
+                background-image: url('https://s3.amazonaws.com/oodles-blogs/blog-images/852f2e7b-d46c-49f6-93ee-c3a584f1965f.png');
+                background-position-x: right;
+                background-position-y: top;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-size: 200px 200px;">
+                <p style="padding-top: 50px;">Hi <strong><span th:text="${name}"></span></strong>,</p>
+                <p>
+                    This mail is to inform you of the change in the amount of monthly
+                    reserve for <span th:text="${buName}"></span> that has occured from
+                    <span th:text="${yesterdayDate}"></span> to
+                    <span th:text="${todayDate}"></span>
+                </p>
+
+                <div style="max-width: 500px">
+                    <div style="padding: 20px 0">
+                        <table style="width: 100%">
+                            <tr>
+                                <th colspan="2">
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                        ">
+                                        <strong><span th:text="${yesterdayDate}"></span></strong>
+                                    </p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td style="width: 70%">
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                        ">
+                                        Total Margin
+                                    </p>
+                                </td>
+                                <td>
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                          text-align: right;
+                        " th:text="${yesterdayTotalMargin}"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 70%;">
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                        ">
+                                        YTD Disputed
+                                    </p>
+                                </td>
+                                <td>
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                          text-align: right;
+                        " th:text="${yesterdayYTD}"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 70%;">
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                        ">
+                                        Net Margn
+                                    </p>
+                                </td>
+                                <td>
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                          text-align: right;
+                        " th:text="${yesterdayNetMargin}"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 70%;">
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                        ">
+                                        BU Reserve
+                                    </p>
+                                </td>
+                                <td>
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                          text-align: right;
+                        " th:text="${yesterdayBuReserve}"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 70%;">
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                        ">
+                                        Debited Amount
+                                    </p>
+                                </td>
+                                <td>
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                          text-align: right;
+                        " th:text="${yesterdayDebitedAmount}"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 70%;">
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                        ">
+                                        Reserve (Total)
+                                    </p>
+                                </td>
+                                <td>
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                          text-align: right;
+                        " th:text="${yesterdayReserveTotal}"></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="padding: 20px 0">
+                        <table style="width: 100%">
+                            <tr>
+                                <th colspan="2">
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                        ">
+                                        <strong><span th:text="${todayDate}"></span></strong>
+                                    </p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td style="width: 70%">
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                        ">
+                                        Total Margin
+                                    </p>
+                                </td>
+                                <td>
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                          text-align: right;
+                        " th:text="${todayTotalMargin}">
+                                        %
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 70%">
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                        ">
+                                        YTD Disputed
+                                    </p>
+                                </td>
+                                <td>
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                          text-align: right;
+                        " th:text="${todayYTD}">
+                                        %
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 70%">
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                        ">
+                                        Net Margn
+                                    </p>
+                                </td>
+                                <td>
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                          text-align: right;
+                        " th:text="${todayNetMargin}">
+                                        %
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 70%">
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                        ">
+                                        BU Reserve
+                                    </p>
+                                </td>
+                                <td>
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                          text-align: right;
+                        " th:text="${todayBuReserve}"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 70%">
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                        ">
+                                        Debited Amount
+                                    </p>
+                                </td>
+                                <td>
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                          text-align: right;
+                        " th:text="${todayDebitedAmount}"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 70%">
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                        ">
+                                        Reserve (Total)
+                                    </p>
+                                </td>
+                                <td>
+                                    <p style="
+                          border: 0.5px solid #707070;
+                          border-radius: 4px;
+                          padding: 8px;
+                          margin: 0;
+                          text-align: right;
+                        " th:text="${todayReserveTotal}"></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                 <div style="color: #707070; padding: 0 10px">
+                <p>Thanks</p>
+                <p>Team Oodles</p>
+            </div>
+
+            </div>
+            <div>
+            </div>
+        </div>
+        <div style="
+          color: #707070;
+          font-size: 14px;
+          border-top: 1px solid #7070703d;
+          text-align: center;
+          padding: 10px;
+        ">
+            <p>
+                If you need any assistance or have questions, please contact at
+                <a href="mailto:hr@oodles.io">hr@oodles.io</a>
+            </p>
+            <p>Copyright 2009-2022 Oodles Technologies. All Rights Reserved</p>
+        </div>
+    </div>
+</body>
+
+</html>

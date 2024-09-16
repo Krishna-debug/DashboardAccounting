@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: ${DASHBOARD_ACCOUNTS_APPLICATION_NAME}       
+  boot:
+    admin:
+      client:
+        url: https://ms.oodleslab.com/accounts
+server:
+  port: ${DASHBOARD_ACCOUNTS_PORT_NUMBER}              
+    
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 120000
+        readTimeout: 120000

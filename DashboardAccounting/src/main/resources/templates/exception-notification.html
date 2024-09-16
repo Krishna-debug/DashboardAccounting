@@ -1,0 +1,43 @@
+<html>
+
+<!-- ticket create to Supervisor for mail  -->
+
+<body style="margin: 0;font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;">
+	<table style="width:70%;border:1px solid #ddd">
+		<tbody>
+			<tr>
+				<td>
+					<!-- Nested table for the logo with background color -->
+					<table style="width:100%;background:#ddd">
+						<tbody>
+							<tr>
+								<td style="padding:10px"><img
+										src="https://my.oodles.io/assets/dashboard/front/logo.png"></img>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td style="color: #333; font-size:13px; padding: 21px 10px 12px 10px;"> Hello,</td>
+			</tr>
+			<tr>
+				<p>The following exception Occured while making request to <span th:text="${url}"></span></p>
+			</tr>
+			<tr th:each="message : ${messages}">
+				<p style="padding:10px" th:text="${message}"> </p>
+			</tr>
+			<tr>
+				<td
+					style="background:#ddd;font-size: 13px;border-top:5px solid #0099cc;padding:15px 0;text-align:center">
+					If you need assistance or have questions,please contact at <a
+						href="mailto:dashboard-support@oodles.io" target="_blank">dashboard-support@oodles.io</a>
+					<p>Copyright 2009-<span th:text="${currentYear}" /> OodlesTechnologies. All rights reserved.</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>

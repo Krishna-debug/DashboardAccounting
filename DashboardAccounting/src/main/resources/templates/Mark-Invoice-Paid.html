@@ -1,0 +1,116 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+	<!-- Main content table -->
+	<table style="width:70%;border:1px solid #ddd">
+		<tbody>
+			<tr>
+				<td>
+					<!-- Nested table for the logo with background color -->
+					<table style="width:100%;background:#ddd">
+						<tbody>
+							<tr>
+								<td style="padding:10px"><img
+										src="https://s3.amazonaws.com/oodles-blogs/blog-images/81543e60-ff6b-4b57-bc6e-70c23563feb0.png">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td style="color: #333; font-size:14px; padding: 21px 10px 12px 16px;line-height: 18px;"> Hi
+					<Strong><span th:text="${managerName}"></span></Strong>,
+				</td>
+			</tr>
+			<tr>
+				<td
+					style="padding: 25px 9px 11px 30px; display:block;line-height: 18px;text-align: justify;padding-right: 30px;">
+					This is to notify you that INV-<Strong><span th:text="${invoiceId}"></span></Strong> of project
+					<Strong><span th:text="${projectName}"></span></Strong> has been marked <b>PAID</b>
+					by <Strong>Accounts Team</Strong> on <Strong><span th:text="${currentDate}"></span></Strong>.
+					The invoice details can be accessed in the Invoice section of the Project Dashboard of <span
+						th:text="${projectName}"></span>.
+				</td>
+			</tr>
+			<!-- <tr>
+				<td
+					style="padding: 25px 9px 11px 30px; display:block;line-height: 18px;text-align: justify;padding-right: 30px;">
+						<span th:text="${invoiceId}"></span>of project <span th:text="${projectName}"></span>is marked as Paid from
+ 			<span th:text="${previousInvoiceStatus}"></span>on <span th:text="${currentDate}"></span>by <span th:text="${currentUserName}"></span>.
+ 			 The invoice details can be accessed in the Invoice section of the Project Dashboard of <span th:text="${projectName}"></span>.
+				</td>
+			</tr> -->
+			<tr>
+				<td style="padding:25px 12px 11px 12px; display:block;">
+					<!-- Invoice Details table -->
+					<table style="width:100%;border:1px solid #ddd">
+
+						<thead>
+							<tr style=" border-style: double;">
+								<th style="border: 1px solid #dddddd;padding: 5px;text-align: left; width:20%">Fields
+								</th>
+								<th style="border: 1px solid #dddddd;padding: 5px;text-align: left; width:20%">Details
+								</th>
+							</tr>
+							<tr style=" border-style: double;" th:if="${currency=='RUPEE'}">
+								<td style="width:40%;text-align:left;border:1px solid #ccc;padding:6px;">Amount in INR
+								</td>
+								<td th:text="${amtInInr}"
+									style="width:40%;text-align:left;border:1px solid #ccc;padding:6px;"></td>
+							</tr>
+							<tr style=" border-style: double;">
+								<td style="width:40%;text-align:left;border:1px solid #ccc;padding:6px;">Amount</td>
+								<td th:text="${amount} "
+									style="width:40%;text-align:left;border:1px solid #ccc;padding:6px;"></td>
+							</tr>
+							<tr style=" border-style: double;">
+								<td style="width:40%;text-align:left;border:1px solid #ccc;padding:6px;">Currency</td>
+								<td th:text="${currency}"
+									style="width:40%;text-align:left;border:1px solid #ccc;padding:6px;"></td>
+							</tr>
+							<tr>
+								<td style="width:40%;text-align:left;border:1px solid #ccc;padding:6px;">Client Name
+								</td>
+								<td th:text="${clientName}"
+									style="width:40%;text-align:left;border:1px solid #ccc;padding:6px;"></td>
+							</tr>
+							<tr style=" border-style: double;">
+								<td style="width:40%;text-align:left;border:1px solid #ccc;padding:6px;">Created On</td>
+								<td th:text="${createdDate}"
+									style="width:40%;text-align:left;border:1px solid #ccc;padding:6px;"></td>
+							</tr>
+							<tr style=" border-style: double;">
+								<td style="width:40%;text-align:left;border:1px solid #ccc;padding:6px;">Previous Status
+								</td>
+								<td th:text="${previousInvoiceStatus}"
+									style="width:40%;text-align:left;border:1px solid #ccc;padding:6px;"></td>
+							</tr>
+							<tr style=" border-style: double;">
+								<td style="width:40%;text-align:left;border:1px solid #ccc;padding:6px;">Current Status
+								</td>
+								<td style="width:40%;text-align:left;border:1px solid #ccc;padding:6px;">PAID</td>
+							</tr>
+						</thead>
+
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td style="padding-top: 20px;padding-left: 20px;">Thanks</td>
+			</tr>
+			<tr>
+				<td style="padding:6px 20px 10px 19px;">Team Oodles</td>
+			</tr>
+			<tr>
+				<td style="background:#ddd;border-top:5px solid #0099cc;padding:15px 0;text-align:center;width:100%;">
+					<p>Copyright 2009-<span th:text="${currentYear}"></span>
+						<g:formatDate format="yyyy" date="${new Date()}" /> OodlesTechnologies. All rights reserved.
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>

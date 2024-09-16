@@ -1,0 +1,233 @@
+package com.krishna.util;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class ConstantUtility {
+	public static final Logger LOGGER = LoggerFactory.getLogger(ConstantUtility.class);
+	
+	public static final String SUCCESS = "success";
+	public static final String TIME_STAMP = "timestamp";
+	public static final String MESSAGE = "message";
+	public static final String FIELD_ERROR = "fielderror";
+	public static final String STATUS = "status";
+	public static final String VALID_TOKEN="validtoken";
+	public static final String INVALID_TOKEN="invalidtoken";
+	public static final String FAILED="Failed to get Response";
+	public static final String ISSUCCESS = "isSuccess";
+	public static final String NOT_FOUND="not exist";
+	public static final String DATA_FETCHED_SUCCESSFULLY="Data Fetched Successfully";
+	public static final String DETAILS_NOT_FOUND = "Details Not Found";
+	
+	public static final String UNASSIGNED ="Unassigned";
+	public static final String DISPUTED_INVOICE_PERCENTAGE = "disputedInvoicePercentage";
+	public static final String TOTAL_DISPUTED_AMMOUNT ="totalDisputedAmmount";
+	public static final String TOTAL_INVOICE_AMOUNT = "totalInvoiceAmmount";
+	public static final String INVOICE_NOT_EXISTS = "Invoice Not exist";
+	public static final String ACTION_ALREADY_TAKEN = "Action Already taken !";
+	public static final String SAVED_SUCCESSFULLY = "Saved Successfully!";
+
+	//public static final String Unassigned ="Unassigned";	
+	public static final String CREATION_FAILED="Unable to create records";
+	public static final String EDITING_FAILED="Unable to edit record";
+	public static final String ACCESS_DENIED="access.denied";
+	public static final String ALREADY_EXIST="Already Exists";
+	public static final String NON_NULL="Type can not be null";
+	public static final String ADDED_SUCCESSFULLY="Added Successfully";
+	public static final String DELETED_SUCCESSFULLY="Deleted Successfully";
+	public static final String FETCHED_PAYSLIP_SUCCESSFULLY="Fetched payslip successfully";
+	public static final String UNABLE_FETCH_PAYSLIP="Unable to fetch payslip";
+	public static final String PAYROLL_CREATION_FAILED="No Records found for generating payroll";
+	
+	public static final String PROBLEM_WITH_SENDING_EMAIL_TO_ERROR_MESSAGE = "Problem with sending email to: {}, error message: {}";
+	public static final String EMAIL_SEND_ERROR = "email send error : {}";
+	public static final String DEVELOPMENT = "development";
+	public static final String LOCAL_DEVELOPMENT = "localDevelopment";
+	public static final String STAGING = "staging";
+	public static final String SEND_EMAIL_TO = "Send email to: ";
+	public static final String TO_ADDRESS = "toAddress {}";
+	public static final String CC = "cc {}";
+	public static final String UNABLE_TO_FETCH_DATA="Unable to fetch data";
+	public static final String DATA_="data";
+	
+	public static final String ROLE_ACCOUNTS = "ROLE_ACCOUNTS";
+	public static final String ROLE_ACCOUNTS_ADMIN = "ROLE_ACCOUNTS_ADMIN";
+	public static final String ROLE_DASHBOARD_ADMIN = "ROLE_DASHBOARD_ADMIN";
+	public static final String SENT_DATE = "sentDate";
+	public static final String BU_DATA = "buData";
+	public static final String WORKING_DAYS = "workingDays";
+	public static final String EXPECTED_HOURS = "expectedHours";
+	public static final String MONTHLY_HOURS = "monthlyHours";
+	public static final String BU_HOURS = "buHours";
+	public static final String PROJECT_IDS_LIST = "projectIdsList";
+	public static final String PROJECT_NAME = "projectName";
+	public static final String PROJECT_CATEGORY = "projectCategory";
+	public static final String PROJECT_MANAGER = "projectManager";
+	public static final String PROJECT_MANAGER_ID = "projectManagerId";
+	public static final String PROJECT_ID = "projectId";
+	public static final String PROJECT_EMPLOYEE_COUNT = "projectEmployeeCount";
+	public static final String TOTAL_EMPLOYEES = "totalEmployees";
+	public static final String EMPLOYEE_ID = "employeeId";
+	public static final String IS_PAYROLL_GENERATED = "isPayrollGenerated";
+	public static final String PAN_NUMBER = "panNumber";
+	public static final String BANK_NAME = "bankName";
+	public static final String EFFECTIVE_TO = "effectiveTo";
+	public static final String DESIGNATION = "designation";
+	public static final String DEPARTMENT = "department";
+	public static final String HEALTH_INSURANCE = "healthInsurance";
+	public static final String UNPAID_LEAVES = "unpaidLeaves";
+	public static final String NON_WORKING_DAYS = "nonWorkingDays";
+	public static final String ACTUAL_HOURS = "actualHours";
+	public static final String USER_ID = "userId";
+	public static final String DATE_OF_JOINING = "dateOfJoining";
+	public static final String IS_ARREAR_INCLUDED = "isArrearIncluded";
+	public static final String IS_PREVIOUS_ARREAR_INCLUDED = "isPreviousArrearsIncluded";
+	public static final String BUSINESS_VERTICAL = "businessVertical";
+	public static final String AGING = "aging";
+	public static final String ALREADY_EXISTS = "already exists";
+	public static final String FAILURE = "failure";
+	public static final String PAYMENT_MODE_TYPE = "paymentModeType";
+	public static final String PENDING = "Pending";
+	public static final String DATE_FORMAT = "dd-MM-yyyy";
+	public static final String EMPLOYEE_SALARY = "employeeSalary";
+	public static final String INDIRECT_COST = "indirectCost";
+	public static final String PROJECT_COST = "projectCost";
+	public static final String INVOICE_AMOUNT = "invoiceAmount";
+	public static final String COMPLIANT = "Compliant";
+	public static final String NON_COMPLIANT = "Non Compliant";
+	public static final String INVOICE_AMOUNT_IN_RUPEE ="invoiceAmountInRupee";
+	public static final String DOLLAR_EXCHANGE_VALUE="dollarValue";
+	public static final String PROFILE_STATUS="profileStatus";
+	public static final String TOTAL_COST="totalCost";
+	public static final String INVOICE_PROJECT_ID = "invoiceProjectIds";
+	public static final String BU_OWNER = "buOwner";
+	public static final String PER_PERSON_HOURS = "perPersonHours";
+	public static final String LEAVE_COST_PERCENTAGE= "leaveCostPercentage";
+	public static final String USER_LIST = "userList";
+	public static final String TOTAL_MONTHLY_PAY = "totalMonthlyPay";
+	public static final String LEAVE_DEDUCTION= "leaveDeductions";
+	public static final String RESULT="result";
+	public static final String DIRECT_COST="directCost";
+	public static final String GRADE = "grade";
+	public static final String INVOICE_AMOUNT_INR="invoiceAmountInRupee";
+	public static final String FETCHED_SUCCESSFULLY="Fetched successfully";
+	public static final String DATA_SERVER_CHANGED_TO_OLAP ="Data server has been changed to OLAP!";
+	public static final String DATA_SERVER_CHANGED_TO_ACCOUNTS= "Data server has been changed to Accounts!";
+	public static final String TOTAL_GRADE_COST = "totalGradeCost";
+	public static final String TOTAL_BU_COST = "totalBuCost";
+
+	public static final String ATTENDENCE_VERIFICATION_FAILED = "Attendance is not Verified";
+	public static final String PAYROLL_NOT_EXISTS = "Unable to find payroll.";
+	public static final String PAYROLL_GENERATED_PAYSLIP_NOT_ADDED = "Payroll has been Processed,Unable to add in payslip";
+	public static final String ATTENDANCE_VERIFIED = "Attendance data Verified ";
+	public static final String ATTENDANCE_UNVERIFIED = "Attendance data UnVerified ";
+	public static final String FILE_DOWNLOADED = "File Downloaded";
+	public static final String UNABLE_TO_DOWNLOAD = "Unable to download File";
+	public static final String ALL_USERS_VERIFIED = "All the users are Already verified";
+	public static final String MAIL_SENT = "Mail Sent Successfully";
+	public static final String COMMENT_SAVED = "Comment saved successFully!";
+	public static final String COMMENTS_FETCHED = "Successfully fetched payroll comments.";
+	public static final String UNABLE_TO_FETCH_COMMENTS = "Unable to fetch payroll comments.";
+	public static final String PAYROLL_OR_PAYSLIP_NOT_EXISTS = "Either payroll or payslip doesn't exists";
+	public static final String PAYROLL_ON_PRIORITY = "Payroll has been marked on priority.";
+	public static final String UNABLE_TO_SET_PAYROLL_ON_PRIORITY = "Error Occured while marking payroll on priority.";
+	public static final String PRIORITY_RESET_DONE = "Payroll Priority has been reset.";
+	public static final String UNABLE_TO_RESET_PRIORITY = "Error Occured while resetting Payroll Priority.";
+	public static final String EFFECTIVE_DATE_IS_BEFORE_PREVIOUS_EFFECTIVE_DATE = "Effective Date is before the previous Effective Date";
+	public static final String PAY_REGISTER_FROZEN = "Cost has been frozen for this month";
+
+	/*Date Formatter pattern for parsing date values.*/
+	public static final String DATE_FORMATTER_FORMAT ="yyyy-MM-dd'T'HH:mm:ss'Z'";
+	public static final String DATE_FORMATTER_FORMAT2 ="yyyy-MM-dd HH:mm:ss.S";
+	public static final String EFFECTIVE_DATE_BEFORE_JOINING_DATE = "Effective Date should not be before Joining Date.";
+	public static final String SAME_EFFECTIVE_DATE_PAYREGISTER_EXISTS = "Payregister with same effective date already Exists.";
+	public static final String ACCOUNT_DETAILS_FETCHED = "Account Details fetched successfully";
+	public static final String USER_IS_NOT_IN_PAYREGISTER = "User is not registered in the payregister.";
+	public static final String PAYREVISION_EDITED = "PayRevision has been edited";
+	public static final String UNABLE_TO_EDIT_PAYREVISION = "Unable to Edit Payrevision.";
+	public static final String PAYREVISION_DELETED = "PayRevision has been deleted";
+	public static final String UNABLE_TO_DELETE_PAYREVISION = "Unable to delete Payrevision";
+
+	public static final String AVERAGE_BILLING_RATE = "averageBillingRate";
+
+	public static final String NO_GIC_FOR_YEAR = "There are no fixed cost entries for given year";
+
+	public static final String NO_CONTENT = "No Content";
+
+	public static final String SAVED_PAYROLL_COMMENTS = "Added Accounts Comments";
+	public static final String UNABLE_TO_ADD_PAYROLL_COMMENTS = "Unable to add Accounts Comments.";
+	public static final String DATA = "data";
+	public static final String NO_DATA_AVAILABLE = "No Data Available";
+
+	public static final String AVERAGE ="Average";
+	public static final String BAD = "Bad";
+	public static final String POOR ="Poor";
+	public static final String VERY_POOR ="Very Poor";
+
+	public static final String EXCLUDED_AMOUNT = "excludedAmount";
+	public static final String OPERATIONS_SUPPORT = "Operations Support";
+	public static final String BU_SPECIFIC_TYPE_USE = "Bu Specific Type already in use" ;
+	public static final String UNABLE_TO_FETCH_COST="Unbale to fetch Infra cost";
+	public static final String NOT_AUTHORIZED="Not Authorized";
+	public static final String COMPLIANT_SMALL_STRING = "compliant";
+	public static final String MONTH= "month";
+	public static final String YEAR="year";
+	public static final String TOTAL_INFRA_COST="totalInfraCost";
+	public static final String TOTAL_VARIABLE_COST="totalVariableCost";
+	public static final String TOTAL_REIMBURSMENT_COST="totalReimbursementCost";
+	public static final String TOTAL_ASSET_COST="totalAssetCost";
+	public static final String ASSET_COST="assetCost";
+	public static final String TOTAL_CUMULATIVE_COST="totalCommulativeCost";
+	public static final String PROJECTS="projects";
+	public static final String TEAM_DATA="teamData";
+	public static final String TEAM_LIST="teamList";
+	public static final String TOTAL_EXPECTED_HOURS="totalExpectedHours";
+	public static final String USER_COUNT="userCount";
+	public static final String EMPLOYEE_NAME="employeeName";
+	public static final String EMPLOYEE_STATUS="employmentStatus";
+	public static final String BILLABLE_STATUS="billableStatus";
+	public static final String REMARKS="remarks";
+	public static final String VARIABLE_PAY="variablePay";
+	public static final String WORK_FROM_HOME_ALLOWANCE="workFromHomeAllowance";
+	public static final String SPECIAL_ALLOWANCE="specialAllowance";
+	public static final String VOLUNTARY_PAY="voluntaryPay";
+	public static final String ARREAR="arrear";
+	public static final String EXCEPTION_DEBUG_STRING="Exception is : {}";
+	public static final String PREVIOUS_ARREAR="previousArrear";
+	public static final String IS_ATTENDANCE_VERIFIED="isAttendanceVerified";
+	public static final String TIMESHEET_COMPLIANT="timesheetCompliant";
+	public static final String IS_TIMESHEET_COMPLIANT="isTimesheetCompliant";
+	public static final String UPDATED_ON="updatedOn";
+	public static final String UNPAID_DAYS="unpaidDays";
+	public static final String ATTENDANCE_DATA="attendanceData";
+	public static final String IS_ATTENDANCE_VERIFIED_STRING="iSAttendanceVerfied";
+	public static final String CURRENT_YEAR="currentYear";
+	public static final String HTTPS_STRING="https://";
+	public static final String LAST_UPDATED_ON="lastUpdatedOn";
+	public static final String TOTAL_HOURS="totalHours";
+	public static final String PROJECT_WISE_HOURS="projectWiseHours";
+	public static final String SALARY_TOTAL="salaryTotal";
+	public static final String FORECASTED_ACCOUNTING_HOURS="forecastedAccountingHours";
+	public static final String FORECASTED_HOURS="forecastedHours";
+	public static final String RESOURCING_HOURS="resourcingHours";
+	public static final String TOTAL_RESOURCING_HOURS="totalResourcingHours";
+	public static final String PAYMENT_MODE="paymentMode";
+	public static final String BILLING_COMPLIANCE="billingCompliance";
+	public static final String EXPECTED_BILLING="expectedBilling";
+	public static final String EXPECTED_BILLING_RATE="expectedBillingRate";
+	public static final String LIFETIME_AVERAGE_BILLING_RATE="lifetimeAverageBillingRate";
+	public static final String BU_OWNER_MAIL="buOwnerMail";
+	public static final String MANAGER="manager";
+	public static final String DIFFERENCE_PERC="differencePerc";
+	public static final String COMPLIANT_PERC="compliantPerc";
+	public static final String FORECAST="Forecast";
+	public static final String PARSE_EXCEPTION_STRING="Parse Exception :: {} ";
+	public static final String EXCEPTION_STRING="Exception :: {} ";
+	public static final String HTTPS = "https://";
+	public static final String USED_IFSD="Ifsd already used";
+	
+	public ConstantUtility() {
+		super();
+	}
+
+}

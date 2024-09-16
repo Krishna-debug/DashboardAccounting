@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		/* Media query for screens with a max width of 768px */
+		@media (max-width: 768px) {
+
+			/* Adjust styles for smaller screens */
+			.oodles-template .div {
+				width: 100%;
+				/* Adjust width as needed */
+			}
+
+			/* Add more responsive styles as needed */
+		}
+
+		.oodles-template {
+			background-color: #ffffff;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			width: 100%;
+			padding-bottom: 0px !important;
+			border: 1px solid #ddd;
+		}
+
+		.oodles-template .div {
+			background-color: #ffffff;
+			position: relative;
+			padding: 20px;
+		}
+
+		.oodles-template .image {
+			width: 200px;
+			height: 20px;
+			object-fit: cover;
+		}
+
+		.oodles-template .overlap-group {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 10px;
+		}
+
+		.oodles-template .hi-pay-plus-we-hope {
+			width: 394px;
+			font-family: "Open Sans-Regular", Helvetica;
+			font-weight: 400;
+			color: #263238;
+			font-size: 12px;
+			letter-spacing: 0;
+			line-height: 22px;
+		}
+
+		.oodles-template .text-wrapper {
+			font-family: "Open Sans-Regular", Helvetica;
+			font-weight: 400;
+			color: #263238;
+			font-size: 12px;
+			letter-spacing: 0;
+			line-height: 22px;
+		}
+
+		.oodles-template .span {
+			font-family: "Open Sans-Bold", Helvetica;
+			font-weight: 700;
+		}
+
+		.oodles-template .customer-survey-pana {
+			width: 286px;
+			height: 191px;
+		}
+
+		.oodles-template .thanks-for-your {
+			width: 660px;
+			font-family: "Open Sans-Regular", Helvetica;
+			font-weight: 400;
+			color: #263238;
+			font-size: 12px;
+			letter-spacing: 0;
+			line-height: 22px;
+		}
+
+		.feedbackBox {
+			font-family: "Open Sans-Medium", Helvetica;
+			font-weight: 500;
+			color: #ffffff;
+			font-size: 12px;
+			text-align: center;
+			letter-spacing: 0;
+			line-height: 22px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Main content table -->
+	<table>
+		<tr>
+			<td>
+				<div class="oodles-template">
+					<div class="div" style="min-width: 650px; max-width: 900px; ">
+						<img class="image"
+							src="https://s3.amazonaws.com/oodles-blogs/blog-images/81543e60-ff6b-4b57-bc6e-70c23563feb0.png" />
+						<div style="display: flex;">
+							<span style="display: inline-block;
+			padding: 5px 0;
+			max-width: 50%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			font-size: 12px;
+			font-weight: 700;
+			font-family: 'Open Sans-Bold', Helvetica;flex-shrink:0; margin-right:auto;"
+								th:text="'Payment Confirmation | ' + ${project}"></span>
+							<span style="display: inline-block;
+			color: #134974;
+			font-weight: 600;
+			background-color: #EAF3F9;
+			border-radius: 8px;
+			padding: 5px 10px;
+			font-size: 10px;
+			font-family: 'Open Sans-SemiBold', Helvetica;flex-shrink:0;"
+								th:text="'Invoice Period ' + ${fromDate} + ' - ' + ${toDate}"></span>
+						</div>
+						<div class="overlap-group" style="display: flex;">
+							<p class="hi-pay-plus-we-hope">
+								<span class="text-wrapper" th:text="'Hi ' + ${clientName} + ','"></span>
+								<br />
+								<br /> We hope this email finds you well. We wanted to inform you that we have received
+								<span class="text-wrapper" th:if="${modeOfPayment == 'Wire transfer'}"> the credit
+									against invoice number </span>
+								<span class="text-wrapper" th:unless="${modeOfPayment == 'Wire transfer'}"> payment
+									notification via <span class="text-wrapper" th:text="${modeOfPayment}"></span>
+									against </span>
+								<span class="span" th:text="'#INV-'+${invoiceId}"></span>
+								<span class="text-wrapper"> for the <br />Project: </span>
+								<span class="span" th:text="${project}">
+									<br />
+								</span>
+								<span class="text-wrapper">
+									<br />
+									<br /> Paying Entity: </span>
+								<span class="span" th:text="${payingEntityName}">
+									<br />
+								</span>
+								<span class="text-wrapper">
+									<br /> Invoice Period: </span>
+								<span class="span" th:text="${fromDate} + ' - ' + ${toDate}"></span>
+							</p>
+							<img src="https://s3.amazonaws.com/oodles-blogs/blog-images/f0822251-9fe6-4f2f-9fca-8cb0c60588df.png"
+								style="object-fit: contain;" />
+						</div>
+						<div class="thanks-for-your">
+							<span class="text-wrapper">
+								<br /> Thanks for your payment! <br />
+								<br /> Best Regards, <br /> Oodles Technologies </span>
+						</div>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+</body>
+
+</html>

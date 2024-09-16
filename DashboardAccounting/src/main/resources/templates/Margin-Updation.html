@@ -1,0 +1,52 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+	<!-- Main content table -->
+	<table style="width:70%;border:1px solid #ddd">
+		<tbody>
+			<tr>
+				<td>
+					<!-- Inner table for the logo with background -->
+					<table style="width:100%;background:#ddd">
+						<tbody>
+							<tr>
+								<td style="padding:10px"><img
+										src="https://s3.amazonaws.com/oodles-blogs/blog-images/81543e60-ff6b-4b57-bc6e-70c23563feb0.png">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td style="color: #333; font-size:14px; padding: 21px 10px 12px 16px;line-height: 18px;"> Hi
+					<Strong><span th:text="${buOwner}"></span></Strong>,
+				</td>
+			</tr>
+			<tr>
+				<td
+					style="padding: 25px 9px 11px 30px; display:block;line-height: 18px;text-align: justify;padding-right: 30px;">
+					The Indirect Cost for <Strong><span th:text="${monthName}"></span></Strong> <Strong><span
+							th:text="${year}"></span></Strong> has been updated on Dashboard. You may check BU margins
+					for <Strong><span th:text="${monthName}"></span></Strong> <Strong><span
+							th:text="${year}"></span></Strong> on <a th:href="${responseUrl}">BU Dashboard</a>.
+				</td>
+			</tr>
+			<tr>
+				<td style="padding-top: 20px;padding-left: 28px;">Thanks</td>
+			</tr>
+			<tr>
+				<td style="padding:6px 20px 10px 28px;">Team Oodles</td>
+			</tr>
+			<tr>
+				<td style="background:#ddd;border-top:5px solid #0099cc;padding:15px 0;text-align:center;width:100%;">
+					<p>Copyright 2009-<span th:text="${currentYear}"></span>
+						<g:formatDate format="yyyy" date="${new Date()}" /> OodlesTechnologies. All rights reserved.
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>

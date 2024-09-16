@@ -1,0 +1,72 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+	<!-- Main content table -->
+	<table style="width: 70%;border: 1px solid #ddd;background-image:url('https://s3.amazonaws.com/oodles-blogs/blog-images/694a74d6-ef4e-41b1-9eab-4fcf9f64ec60.png');background-repeat: no-repeat;background-position: 100% 25%
+	;background-size:180px 190px">
+		<tbody>
+			<tr>
+				<td style="
+    border-bottom: 1px solid #ddd;">
+					<div class="row" style="padding: 0 2%">
+						<div class="col-md-6" style="float:left;">
+							<img src="https://s3.amazonaws.com/oodles-blogs/blog-images/81543e60-ff6b-4b57-bc6e-70c23563feb0.png"
+								style="width: 160px;padding-left:10px">
+
+						</div>
+						<div class="col-md-6" style="float:right;height:0px; position:relative;">
+							<h4
+								style="margin-bottom: 0; color: rgba(0, 50, 107, 0.5); text-align:center; margin-top: 6px">
+								<span th:text="${type}"></span> Timesheet Compliance Update
+							</h4>
+
+
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td style="color: #333; font-size:12px; padding: 21px 10px 12px 30px;line-height: 10px;"> Hi
+					<Strong><span th:text="${buHead}"></span></Strong>
+				</td>
+			</tr>
+			<tr>
+				<td style="color: #333; font-size:12px; padding: 4px 10px 4px 10px;padding-left:30px;">
+					This mail is to inform you that
+					<Strong><span th:text="${employeeName}"></span></Strong>
+					have <Strong>less than 75%</Strong> Timsheet compliance
+					<br></br>
+					for the month of
+					<Strong><span th:text="${monthName}"></span>
+						<span th:text="${year}"></span>.</Strong>
+				</td>
+			</tr>
+			<td style="color: #333; font-size:13px; padding: 10px 10px 10px 10px;padding-left:30px;">You can authorise
+				the payroll of the employee
+				by taking action below.
+				<br></br>
+				<br></br>
+				<a th:href="${approveUrl}" role='button'
+					style="background:#4CAF50 ; border-radius: 3px ; color:#fff; padding :  5px;text-decoration : none ">Approve</a>
+				<a th:href="${disapproveUrl}" role='button'
+					style="background: #DC3541 ; border-radius: 3px ;margin-left:5px; color:#fff; padding :  5px;text-decoration : none ">Disapprove</a>
+				<tr>
+					<td style="padding-top: 15px;padding-left: 30px;color:#707070">Thanks</td>
+				</tr>
+				<tr>
+					<td style="padding:6px 20px 10px 30px;color:#707070">Team Resourcing</td>
+				</tr>
+				<tr>
+					<td style="background:#fff;text-align:center;width:100%;color:#707070;border-top:1px solid #ddd;">
+						<p>If you need any assistance or have questions, please contact at <a style="color:#2f83c5"
+								href="mailto:resourcing@oodlestechnologies.com"> resourcing@oodles.io</a>
+						<p>Copyright 2009-<span th:text="${#dates.format(#dates.createNow(), 'yyyy')}" />
+							OodlesTechnologies. All rights reserved.
+						</p>
+					</td>
+				</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>
